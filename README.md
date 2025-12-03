@@ -21,10 +21,10 @@
 
 在啄木鸟项目中选择此插件并填写以下参数 👇
 
-| 参数名称 | 说明 | 示例 |
-|--------|-----|-----|
-| `version` | TongWeb 版本<br>老版本使用 `1`，新版本使用 `2`（推荐都试一下） | `1` / `2` |
-| `gadget` | 选择利用方式<br>支持 `DNSURL` 和 `XBeans` | `DNSURL`|
+| 参数名称 | 说明 | 示例                                                                                                |
+|--------|-----|---------------------------------------------------------------------------------------------------|
+| `version` | TongWeb 版本<br>老版本使用 `1`，新版本使用 `2`（推荐都试一下） | `1` / `2`                                                                                         |
+| `gadget` | 选择利用方式<br>支持 `DNSURL` 和 `XBeans` | `DNSURL` / `XBeans`                                                                               |
 | `param` | Gadget 对应的参数<br>- `DNSURL` 时填写 DNSLOG 地址<br>- `XBeans` 填写 EL 表达式 | `http://xxxx.dnslog.cn` 或 `${''.getClass().forName('java.lang.Runtime').getRuntime().exec('id')}` |
 
 ⚠️ EL 表达式请根据实际情况替换
