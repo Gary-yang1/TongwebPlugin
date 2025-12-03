@@ -17,7 +17,7 @@ public class serialize {
                 bout.write("OEJP/4.6".getBytes(StandardCharsets.UTF_8));
                 ObjectOutputStream oout = new ObjectOutputStream(bout);
 
-                // 手动调用 writeExternal
+                // 手动模拟 writeExternal
                 oout.writeByte(1);
                 oout.writeObject(object);
                 return bout.toByteArray();
@@ -27,21 +27,19 @@ public class serialize {
                 ServerMetaData se = new ServerMetaData(uri1, uri2);
 
 
-                // 序列化到 ByteArrayOutputStream（相当于 cis 的源）
                 ByteArrayOutputStream bout2 = new ByteArrayOutputStream();
                 ObjectOutputStream oout2 = new ObjectOutputStream(bout2);
 
-                // 手动调用 writeExternal
 
                 se.writeExternal(oout2);
                 oout2.writeByte(0);
                 oout2.writeByte(0);
                 oout2.writeByte(1);
-                // 示例具体值
-                String deploymentId = "DEP123";
+
+                String deploymentId = "genericra1";
                 short deploymentCode = 1;
-                oout2.writeUTF(deploymentId);      // 写字符串
-                oout2.writeShort(deploymentCode);  // 写 short 值
+                oout2.writeUTF(deploymentId);
+                oout2.writeShort(deploymentCode);
 
                 oout2.writeObject(object);
                 oout2.flush();
