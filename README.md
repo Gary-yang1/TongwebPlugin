@@ -47,9 +47,14 @@ Java Memshell Generator : https://github.com/pen4uin/java-memshell-generator
 ## 📁 使用步骤
 
 1. Clone 或下载该插件
+
 2. 将插件文件复制到 `woodpecker/plugin/` 目录下
+
 3. 启动啄木鸟，选择对应插件
+
 4. 填入参数并执行测试
+
+   ![4d6932e58956a43fee2eacf08308ced9](README.assets/4d6932e58956a43fee2eacf08308ced9.jpg)
 
 ---
 
